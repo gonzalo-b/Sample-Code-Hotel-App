@@ -9,6 +9,14 @@ use App\Http\Requests;
 
 class HotelsController extends Controller
 {
+    /*
+     * Middleware
+     */
+    public function __construct()
+    {
+        $this->middleware('admin', ['only' => ['create', 'store']]);
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -48,6 +48,9 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    @if(Auth::check() && Auth::user()->isAdmin())
+                        <li><a href="{{ url('/hotels/create') }}">Create Hotel</a></li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
