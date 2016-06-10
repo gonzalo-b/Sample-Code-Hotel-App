@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Hotel;
+use App\Http\Requests\HotelRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -41,10 +42,11 @@ class HotelsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param HotelRequest $request
      * @return \Illuminate\Http\Response
+     * @internal param $HotelRequest
      */
-    public function store(Request $request)
+    public function store(HotelRequest $request)
     {
         $hotel = new Hotel($request->all());
         $hotel->save();
