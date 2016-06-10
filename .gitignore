@@ -1,0 +1,15 @@
+composer.phar
+/vendor
+/node_modules
+/public/storage
+/bootstrap/compiled.php
+/.idea
+/bower_components
+.idea
+.env
+*.sublime-project
+*.sublime-workspace
+
+
+
+
