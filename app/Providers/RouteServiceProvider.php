@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Hotel;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -39,7 +40,11 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapWebRoutes($router);
 
-        //
+        $router->bind('hotels', function($id)
+        {
+            return Hotel::findOrFail($id);
+        });
+
     }
 
     /**

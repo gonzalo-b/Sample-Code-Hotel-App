@@ -9,7 +9,7 @@
             <br>
             <div class="row">
                 @forelse($hotels as $hotel)
-                    <h3> {{ $hotel->title  }} </h3>
+                    <a href="{{url('hotels/'.$hotel->id.'/comments')}}"> <h3> {{ $hotel->title  }} </h3></a>
                 @empty
                     <h3>No Hotels Were Found</h3>
                 @endforelse

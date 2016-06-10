@@ -17,5 +17,6 @@ Route::auth();
 
 Route::group(['middleware' => ['web', 'auth']], function () {
     Route::resource('hotels', 'HotelsController');
+    Route::resource('hotels.comments', 'CommentsController');
     Route::get('/home', 'HotelsController@index');
 });
